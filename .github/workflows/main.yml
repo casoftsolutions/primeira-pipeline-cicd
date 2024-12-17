@@ -25,7 +25,7 @@ jobs:
           cesarags/aula-primeira-pipeline:latest 
   CD:
     needs: [CI]
-    uses: casoftsolutions/primeira-pipeline-cicd/.github/workflows/deploy.yml@main
+    uses: casoftsolutions/primeira-pipeline-cicd/.github/workflows/deploy.yaml@main
     with:
       manifests: k8s/deployment.yaml
       images: cesarags/aula-primeira-pipeline:v${{ github.run_number }}
